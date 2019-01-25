@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- 设置网页的语言 文字主要是什么语言 en 英语 cn 中文 -->
+<html lang="cn">
+<head>
+    <meta charset="UTF-8">
+    <!-- 1. 设置网页视口 完整视口不允许用户缩放 meta:vp -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <!-- 设置IE的兼容模式 为了让IE浏览器 使用最新的渲染引擎去渲染页面 edge表示最新IE -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jd移动端的主页</title>
+    <!-- 引入一个站点图标 rel设置icon表示引入的图标rel="icon" -->
+    <link rel="icon" href="https://m.jd.com/favicon.ico">
+    <!-- 1. 引入公共的样式文件 -->
+    <!-- <link rel="stylesheet/less" href="less/base.less"> -->
+    <!-- 1. 引入主页的less文件 因为的主页的.less里面已经引入了base.less-->
+    <!-- 也可以直接引入编译好了的css 不用引入less.js来临时编译 不方便调试 -->
+    <!-- <link rel="stylesheet" href="less/index.css"> -->
+    <!-- 如果引入less文件 配合less.js方便调试错误 -->
+    <link rel="stylesheet/less" href="less/index.less">
+    <!-- 3. 引入less.js的编译器文件 -->
+    <script src="lib/less/less.js"></script>
+</head>
+<body>
+  <!-- 写页面的时候先写好页面的大容器结构，而且大容器结构推荐使用ID选择器，id选择器优先级高，方便覆盖插件，框架其他样式，ID方便获取js元素 更加精确 -->
+  <!-- 头部区域 -->
+  <header id = "header">
+      <!-- logo图标 -->
+      <a href="#" class="icon-logo"></a>
+      <!-- 中间搜索表单 -->
+      <form action="#">
+          <!-- 搜索图标 -->
+          <i class="icon-search"></i>
+          <!-- 搜索框type=search 手机端键盘右下角变成搜索文字 -->
+          <input type="search" placeholder="请输入要搜索的商品">
+
+      </form>
+      <!-- 登陆链接 -->
+      <a href="#" ></a>
+  </header>
+  <!-- 轮播图区域 -->
+  <section id="slide"></section>
+  <!-- 导航区域 -->
+  <nav id="nav"></nav>
+  <!-- 主体区域 -->
+  <main id="main"></main>
+  <!-- 底部区域 -->
+  <footer id="footer"></footer>
+</body>
+</html>
